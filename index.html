@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Virtual - Andrés García</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Fondo decorativo con blobs animados -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Contenedor principal full-screen -->
+    <div class="app-container">
+
+        <!-- Panel lateral izquierdo: perfil -->
+        <aside class="profile-sidebar">
+            <div class="sidebar-inner">
+                <div class="avatar-ring">
+                    <div class="avatar-container">
+                        <img
+                            src="https://picsum.photos/seed/andres-garcia-exec/300/300.jpg"
+                            alt="Foto de Andrés García"
+                            class="avatar-img"
+                        >
+                        <div class="avatar-status"></div>
+                    </div>
+                </div>
+                <h1 class="profile-name">Andrés García</h1>
+                <p class="profile-title">Gerente General</p>
+                <p class="profile-company">Grupo Empresarial García S.A.</p>
+
+                <div class="sidebar-divider"></div>
+
+                <!-- Iconos de redes sociales -->
+                <nav class="social-row" aria-label="Redes sociales">
+                    <a href="#" class="social-icon" data-social="facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" data-social="instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" data-social="linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:andresgarcia@ejemplo.com" class="social-icon" data-social="email" aria-label="Correo electrónico">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-icon" data-social="tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </nav>
+
+                <!-- Botón WhatsApp grande en sidebar -->
+                <a href="https://wa.me/523336587521?text=Hola%20Andr%C3%A9s,%20me%20comunico%20desde%20tu%20tarjeta%20virtual" target="_blank" rel="noopener" class="sidebar-whatsapp" aria-label="Contactar por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <div class="sidebar-footer">
+                    <div class="qr-hint">
+                        <i class="fas fa-qrcode"></i>
+                        <span>Comparte esta tarjeta</span>
+                    </div>
+                    <p class="footer-credit">Tarjeta Digital &middot; 2025</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Panel derecho: contenido -->
+        <main class="content-area">
+            <div class="content-inner">
+
+                <!-- Navegación por pestañas -->
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="datos">
+                        <i class="fas fa-address-card"></i>
+                        <span>Datos</span>
+                    </button>
+                    <button class="tab-btn" data-tab="servicios">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Servicios</span>
+                    </button>
+                    <button class="tab-btn" data-tab="galeria">
+                        <i class="fas fa-images"></i>
+                        <span>Galería</span>
+                    </button>
+                </div>
+
+                <!-- Contenido de pestañas -->
+                <div class="tabs-content">
+
+                    <!-- Pestaña: Datos -->
+                    <section class="tab-panel active" id="panel-datos">
+                        <div class="info-grid">
+                            <div class="info-card" data-copy="33 36 587 521">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Teléfono</span>
+                                    <a href="tel:+523336587521" class="info-value">33 36 587 521</a>
+                                </div>
+                                <button class="copy-btn" aria-label="Copiar teléfono">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="info-card" data-copy="andresgarcia@ejemplo.com">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Correo electrónico</span>
+                                    <a href="mailto:andresgarcia@ejemplo.com" class="info-value">andresgarcia@ejemplo.com</a>
+                                </div>
+                                <button class="copy-btn" aria-label="Copiar correo">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="info-card" data-copy="https://ejemplo.com">
+                                <div class="info-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Sitio web</span>
+                                    <a href="https://ejemplo.com" target="_blank" rel="noopener" class="info-value">ejemplo.com</a>
+                                </div>
+                                <button class="copy-btn" aria-label="Copiar sitio web">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="info-card" data-copy="Av. Vallarta 1234, Guadalajara, Jalisco">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Dirección</span>
+                                    <span class="info-value">Av. Vallarta 1234, Guadalajara, JAL</span>
+                                </div>
+                                <button class="copy-btn" aria-label="Copiar dirección">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Botón de acción -->
+                        <div class="action-row">
+                            <button class="btn-primary" id="btn-contact">
+                                <i class="fas fa-user-plus"></i>
+                                Agregar a Contactos
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Pestaña: Servicios -->
+                    <section class="tab-panel" id="panel-servicios">
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon-wrap">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Consultoría Empresarial</h3>
+                                    <p>Estrategia de negocio y optimización operativa para maximizar resultados.</p>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon-wrap">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Gestión de Alianzas</h3>
+                                    <p>Desarrollo de alianzas estratégicas y negociaciones corporativas de alto nivel.</p>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon-wrap">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Desarrollo Organizacional</h3>
+                                    <p>Transformación cultural, liderazgo y estructuración de equipos de alto rendimiento.</p>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon-wrap">
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Expansión de Mercado</h3>
+                                    <p>Planeación y ejecución de estrategias de expansión nacional e internacional.</p>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon-wrap">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Gestión de Riesgos</h3>
+                                    <p>Identificación, evaluación y mitigación de riesgos empresariales integrales.</p>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon-wrap">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Transformación Digital</h3>
+                                    <p>Implementación de tecnologías emergentes para la modernización de procesos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pestaña: Galería -->
+                    <section class="tab-panel" id="panel-galeria">
+                        <div class="gallery-grid">
+                            <div class="gallery-item" style="--delay: 0">
+                                <img src="https://picsum.photos/seed/office-meeting-1/600/400.jpg" alt="Reunión ejecutiva" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span>Reunión ejecutiva</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item" style="--delay: 1">
+                                <img src="https://picsum.photos/seed/corporate-event-2/600/400.jpg" alt="Evento corporativo" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span>Evento corporativo</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item" style="--delay: 2">
+                                <img src="https://picsum.photos/seed/office-modern-3/600/400.jpg" alt="Oficinas centrales" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span>Oficinas centrales</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item" style="--delay: 3">
+                                <img src="https://picsum.photos/seed/team-work-4/600/400.jpg" alt="Trabajo en equipo" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span>Trabajo en equipo</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item" style="--delay: 4">
+                                <img src="https://picsum.photos/seed/conference-5/600/400.jpg" alt="Conferencia de liderazgo" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span>Conferencia</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item" style="--delay: 5">
+                                <img src="https://picsum.photos/seed/awards-night-6/600/400.jpg" alt="Noche de reconocimiento" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span>Reconocimiento 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast de notificación -->
+    <div class="toast" id="toast" role="alert" aria-live="polite">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-msg">Copiado al portapapeles</span>
+    </div>
+
+    <!-- Modal de vista previa de galería -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista de imagen">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen">
+            <i class="fas fa-times"></i>
+        </button>
+        <img src="" alt="" class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
